@@ -120,10 +120,10 @@ happyNewYear = {
 
 			if (response.errors) {
 
-				errorBlock.html('');
+				errorsBlock.html('');
 
 				for (let key in response.errors) {
-					errorBlock.append(response.errors[key] + '<br>');
+					errorsBlock.append(response.errors[key] + '<br>');
 				}
 			} else {
 				if (response.res == true) {

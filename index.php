@@ -85,7 +85,7 @@ $currentDay = 24;
 // die();
 
 if ($currentMonth == 12 && $currentDay >= 24) {
-    $PDO = PdoConnect::getInstans();
+    $PDO = PdoConnect::getInstance();
 
 // $sql = "
 //     CREATE TABLE IF NOT EXISTS orders

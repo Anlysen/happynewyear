@@ -28,11 +28,11 @@ $response = array();
 if ($errors) {
     $response['errors'] = $errors;
 } else {
-    $PDO = PdoConnect::getInstans();
+    $PDO = PdoConnect::getInstance();
 
     $sql = "
         INSERT INTO orders
-        SET fio = :fio, phone = :phone, email = :email, comment = :comment, product_id = :id";
+        SET `fio` = :fio, `phone` = :phone, `email` = :email, `comment` = :comment, `product_id` = :id";
 
     $set = $PDO->PDO->prepare($sql);
     $response['res'] = $set->execute($requestData);

@@ -27,7 +27,7 @@ class PdoConnect {
         $this->PDO = new PDO($this->DSN, self::USER, self::PASS, $this->OPD);
     }
 
-    public static function getInstans() { // К этому обьекту обращаемся, когда нужно получить обьект класса
+    public static function getInstance() { // К этому обьекту обращаемся, когда нужно получить обьект класса
         if (self::$_instance === null) // Проверяем, есть ли обьект класса в свойстве $_instance
             self::$_instance = new self;
 /*
